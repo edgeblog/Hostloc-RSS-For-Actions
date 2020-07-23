@@ -9,16 +9,27 @@
 
 ###### 更新说明。
 20.20.7.24 修改为使用Secrets 储存密匙增加安全性
+
 20.20.7.24 修改为6小时重新运行一次。
+
 2020.07.20 网站加了js验证，针对js验证进行更新，采取抓取手机版的方法绕过js验证
 
 ###### GitHub Actions 使用说明：
 Fork 本仓库 
+
 1.然后点击你的仓库右上角的 Settings 
-2.找到左边 Secrets 这一项，添加1个秘密环境变量。
-3.Name：名称填写 POST_URL 
-4.Value：填写TG机器人密匙（怎么获取TG机器人密匙自行搜索引擎找答案）
+
+2.找到左边 Secrets 这一项，添加2个秘密环境变量。
+
+POST_URL 内容填写TG机器人密匙
+
+TG_ID 内容填写频道ID或者个人ID
+
+
+
 ![](https://cdn.jsdelivr.net/gh/lzw981731/img/2020/07/24/ccea.png)
+
+![](https://cdn.jsdelivr.net/gh/lzw981731/img/2020/07/24/a9e7.png)
 
 ###### VPS 使用说明：
 本脚本为python3脚本，需依赖环境requests，lxml，torequests，js2py等库，第74行bot api需要改为自己bot api，118行需要修改推送id, 机器人每20秒更新一次

@@ -68,7 +68,7 @@ def mark_down(content):
     return content
 
     def post(chat_id, text):
-    try:
+        try:
         text = parse.quote(text)
         post_url = '"post_url"' \
                    '?parse_mode=MarkdownV2&chat_id={0}&text={1}'.format(chat_id, text)

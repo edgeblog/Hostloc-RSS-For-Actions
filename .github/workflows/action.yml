@@ -28,4 +28,5 @@ jobs:
     - name: 'Post push'
       env:
           POST_URL: ${{ secrets.POST_URL }}
+          TG_ID: ${{ secrets.TG_ID }}
       run: python hostloc_tg.py

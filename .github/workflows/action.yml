@@ -26,4 +26,6 @@ jobs:
     - name: 'Install js2py'
       run: python -m pip install --upgrade js2py
     - name: 'Post push'
+      env:
+          post_url: ${{ secrets.post_url }}
       run: python hostloc2tg.py

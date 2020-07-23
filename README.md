@@ -1,4 +1,4 @@
-### ***使用 GitHub Actions 推送 Hostloc 新帖到TG频道/个人***
+### ***使用 GitHub Actions 推送 Hostloc 新帖到TG群组/个人***
 
 ###### 简介：
 
@@ -23,7 +23,7 @@ Fork 本仓库
 
 POST_URL 内容填写TG机器人密匙
 
-TG_ID 内容填写频道ID或者个人ID
+TG_ID 内容填写群组ID或者个人ID
 
 
 

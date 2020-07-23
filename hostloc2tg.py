@@ -79,9 +79,13 @@ def mark_down(content):
         print("推送失败！")
         time.sleep(3)
         post(chat_id, text)
+
+        
 #变量
 if __name__ == "__main__":
     post_url = os.environ["post_url"]
+    
+    
 # 主程序
 def master(r):
     xml_content = etree.HTML(r.content)

@@ -66,11 +66,13 @@ def mark_down(content):
     for k in sign:
         content = content.replace(k, "")
     return content
-
+#变量
+def mark_key(key):
+    post_url = os.environ["post_url"]
 def post(chat_id, text):
     try:
-         text = parse.quote(text)
-         post_url = '"post_url"' \
+     text = parse.quote(text)
+      post_url = '"post_url"' \
                    '?parse_mode=MarkdownV2&chat_id={0}&text={1}'.format(chat_id, text)
         headers = {
             'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36'}
@@ -80,12 +82,6 @@ def post(chat_id, text):
         time.sleep(3)
         post(chat_id, text)
 
-        
-#变量
-if __name__ == "__main__":
-    post_url = os.environ["post_url"]
-    
-    
 # 主程序
 def master(r):
     xml_content = etree.HTML(r.content)

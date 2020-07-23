@@ -28,4 +28,4 @@ jobs:
     - name: 'Post push'
       env:
           POST_URL: ${{ secrets.POST_URL }}
-      run: python hostloc2tg.py
+      run: python hostloc_tg.py

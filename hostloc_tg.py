@@ -26,6 +26,7 @@ def getcookies():
 
 if __name__ == "__main__":
     post_u = os.environ["POST_URL"]
+    tg_id = os.environ["TG_ID"]
     
 # 获得日期
 def get_week_day(date):
@@ -114,7 +115,7 @@ def master(r):
                 content_2 = mark_down(get_content(url_list))
                 text = '【主       题】：' + "***{}***".format(mark_down(name)) + '\n' + '【发  布  者】：[{0}]({1})'.format(mark_down(author[i + 1]), url_author) + '\n' + '【内容 预览】：[{0}]({1})'.format(content_2, url_list)
                 # 修改为自己的想推送的ID
-                post('-1001307176273', text)
+                post(''+tg_id+'', text)
             else:
                 pass
         else:
@@ -151,7 +152,7 @@ def master_1(r):
                 content_2 = mark_down(get_content_1(url_list))
                 text = '【主       题】：' + "***{}***".format(mark_down(name)) + '\n' + '【发  布  者】：[{0}]({1})'.format(mark_down(author[i + 1]), url_author) + '\n' + '【内容 预览】：[{0}]({1})'.format(content_2, url_list)
                 print(text)
-                post('-1001307176273', text)
+                post(''+tg_id+'', text)
             else:
                 pass
         else:

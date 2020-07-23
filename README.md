@@ -1,18 +1,16 @@
-### ***hostloc新帖推送机***
+### ***使用 GitHub Actions 推送 Hostloc 新帖到TG频道/个人***
 
 ###### 简介：
-
-迫于每次有活动都喝不上汤，特意搞了一个自动监视脚本，推送新帖到telegram的机器人，稍后有空补上推送到微信（微信已废，懒得修改了）。
-
-目前已开通了推送频道，可自行点击查看推送效果：https://t.me/hostloc2tg
+推送源码来自：https://github.com/w2r/hostloc2tg
+推送效果：https://t.me/vipkj
 
 ###### 更新说明。
 
 2020.07.20 网站加了js验证，针对js验证进行更新，采取抓取手机版的方法绕过js验证
 
 ###### 使用说明：
-
-本脚本为python3脚本，需依赖环境requests，lxml，torequests，js2py等库，第74行bot api需要改为自己bot api，118行需要修改推送id, 机器人每15秒更新一次
+Fork 本仓库 
+本脚本为python3脚本，需依赖环境requests，lxml，torequests，js2py等库，第74行bot api需要改为自己bot api，118行需要修改推送id, 机器人每20秒更新一次
 
 **需要注册tg机器人，若要推送到频道，请将机器人添加到频道，并给予管理员权限**
 

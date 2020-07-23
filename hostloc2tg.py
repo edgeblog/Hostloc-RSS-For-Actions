@@ -8,7 +8,7 @@ import datetime
 from requests.adapters import HTTPAdapter
 import re
 import js2py
-
+import os
 
 # 获得cookie
 def getcookies():
@@ -24,7 +24,9 @@ def getcookies():
     cookie = "L7DFW=" + data
     return cookie
 
-
+if __name__ == "__main__":
+    post_u = os.environ["POST_URL"]
+    
 # 获得日期
 def get_week_day(date):
     week_day_dict = {
@@ -70,7 +72,7 @@ def mark_down(content):
 def post(chat_id, text):
     try:
         text = parse.quote(text)
-        post_url = 'https://api.telegram.org/bot982571020:AAGmQFaTGlK4HrPL4Ku1VA44yEcM-TW-zaI/sendMessage' \
+        post_url = 'https://api.telegram.org/bot982571020:'+post_u+'/sendMessage' \
                    '?parse_mode=MarkdownV2&chat_id={0}&text={1}'.format(chat_id, text)
         headers = {
             'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36'}

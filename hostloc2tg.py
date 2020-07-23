@@ -66,9 +66,10 @@ def mark_down(content):
     for k in sign:
         content = content.replace(k, "")
     return content
+if __name__ == "KEy":
+    post_url = os.environ["post_url"]
 
-
-def post(chat_id, text):
+    def post(chat_id, text):
     try:
         text = parse.quote(text)
         post_url = '******' \
